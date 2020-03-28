@@ -1,2 +1,2 @@
-# Todo-gatsby-tutorial-
+# Todo-gatsby-tutorial
 Gatsby Tutorial.
