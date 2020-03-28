@@ -1,0 +1,22 @@
+.list-main{
+    height: 75%;
+    overflow-x: hidden; 
+    overflow-x: auto; 
+    width: 100%;
+}
+
+.items{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.3rem;
+
+    padding: 0 10px;
+}
+
+.items:hover {
+    background-color: #E0EEFA;
+    transition: ease-in-out;
+    transition-duration: .3s;
+}
