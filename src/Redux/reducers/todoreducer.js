@@ -2,7 +2,7 @@ import Actions from "./../actionTypes/actiontypes";
 const { ADD_TODO, EDIT_TODO, DELETE_TODO } = Actions;
 const intState ={
     todo: [{
-        name: "",
+        name: "Fist Todo",
         completed: false,
         date: "",
         category: "",
