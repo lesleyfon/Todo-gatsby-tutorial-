@@ -1,8 +1,9 @@
 .list-main{
-    height: 75%;
+    height: 78%;
     overflow-x: hidden; 
     overflow-x: auto; 
     width: 100%;
+    background-color: #ffffff;
 }
 
 .items{

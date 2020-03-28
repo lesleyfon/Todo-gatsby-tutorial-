@@ -1,6 +1,11 @@
 body{
     margin: 0px;
     color:rgb(38, 38, 38);
+    background-image: url('./../assets/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover
 }
 .app{
     max-width: 100%;
