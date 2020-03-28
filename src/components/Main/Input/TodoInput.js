@@ -3,16 +3,16 @@ import { connect } from "react-redux"
 import "./TodoInput.css"
 import { PlusSquare, Calendar, Star, StarFill } from "react-bootstrap-icons"
 // src/components/Main/Input/TodoInput.module.css
-function TodoInput() {
+function TodoInput(props) {
   const [todo, setTodo] = useState({
-    todo: "",
+    name: "",
     completed: false,
     date: "",
     category: "",
     farvorite: false,
   })
   const [farvorite, setfarvorite] = useState(false)
-
+  console.log(props)
   const handleChange = e => {
     setTodo({
       [e.target.name]: e.target.value,
@@ -23,12 +23,13 @@ function TodoInput() {
   const displayFav = () => {
     return farvorite ? <StarFill /> : <Star />
   }
+
   return (
     <div className="div-todo">
       <PlusSquare color={"aliceblue"} />
       <input
         id="input-todo"
-        name="todo"
+        name="name"
         placeholder="Add a todo ..."
         onChange={handleChange}
       />
@@ -49,4 +50,9 @@ function TodoInput() {
   )
 }
 
-export default connect()(TodoInput)
+const mapStateToProps = state => {
+    return {
+        todo: state.todoreducer
+    }
+}
+export default connect(mapStateToProps, null)(TodoInput)

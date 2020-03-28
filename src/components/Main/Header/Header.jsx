@@ -1,5 +1,4 @@
 import React from 'react'
-import {Search, Justify, PersonBoundingBox, Bell } from 'react-bootstrap-icons';
 import './Header.css'
 
 function Header() {

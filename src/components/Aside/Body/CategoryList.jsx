@@ -12,7 +12,6 @@ function CategoryList(props) {
 
     //Render Categories
     const renderCat = () =>{
-        console.log(category)
         if(category.length <= 0){
             return <div>
                 <p>No new categories</p>
