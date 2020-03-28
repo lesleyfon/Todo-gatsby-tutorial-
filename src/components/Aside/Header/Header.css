@@ -1,0 +1,61 @@
+.header{
+    width: 100% fit-content;
+    height: 100px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.top{
+    display: flex;
+    flex-wrap: nowrap;
+    align-self: start;
+    align-items: center;
+    height: 47%;
+    width: auto;
+    background-color: antiquewhite;
+    padding: 5px;
+}
+
+.burger-menu{
+    cursor: pointer;
+    padding-right: 10px;
+
+}
+
+.input-field {
+    position: relative;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-field input{
+    border: none;
+    height: 45px;
+    font-size: 30px;
+    width: 80%;
+    background-color: antiquewhite;
+}
+.input-field	i {
+	position: absolute;
+	width: 2px;
+	height: 80%;
+	background-color: gray;
+	left: 5px;
+	top: 10%;
+	animation-name: blink;
+	animation-duration: 800ms;
+	animation-iteration-count: infinite;
+	opacity: 1;
+}
+
+.input-field input:focus + i {
+	display: none;
+}
+
+@keyframes blink {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
