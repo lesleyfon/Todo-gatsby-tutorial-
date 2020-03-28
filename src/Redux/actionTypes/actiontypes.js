@@ -1,0 +1,8 @@
+ const actionTypes= {
+    ADD_TODO_CATEGORY: 'ADD_TODO_CATEGORY',
+    EDIT_TODO_CATEGORY: 'EDIT_TODO_CATEGORY',
+    DELETE_TODO_CATEGORY: 'DELETE_TODO_CATEGORY',
+}
+
+
+export default actionTypes

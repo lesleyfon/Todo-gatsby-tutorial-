@@ -1,6 +1,9 @@
 import React from 'react'
 import './Main.css'
-function Main() {
+import {connect } from 'react-redux'
+
+function Main(props) {
+    console.log(props)
     return (
         <div className='main'>
             Main
@@ -8,4 +11,7 @@ function Main() {
     )
 }
 
-export default Main
+const mapStateToProps = state =>{
+    return state
+}
+export default connect(mapStateToProps,  {})(Main)
