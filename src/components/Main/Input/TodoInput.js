@@ -1,18 +1,21 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { connect } from "react-redux"
 import "./TodoInput.css"
-import { PlusSquare, Calendar, Star, StarFill } from "react-bootstrap-icons"
-import { addTodo } from "./../../../Redux/actions/todoAction"
-// src/components/Main/Input/TodoInput.module.css
+import { PlusSquare, Calendar, Star, StarFill } from "react-bootstrap-icons";
+
+import { addTodo } from "./../../../Redux/actions/todoAction";
+
+
 function TodoInput(props) {
+  
+  const [favorite, setfavorite] = useState(false)
   const [todo, setTodo] = useState({
     name: "",
     completed: false,
     date: "",
     category: "",
-    farvorite: false,
+    favorite: false,
   })
-  const [farvorite, setfarvorite] = useState(false)
 
   const handleChange = e => {
     setTodo({
@@ -22,12 +25,8 @@ function TodoInput(props) {
     handleSubmit(e)
   }
 
-  useEffect(() => {
-    console.log(props)
-  }, [farvorite, props.todo])
-
   const displayFav = () => {
-    return farvorite ? <StarFill /> : <Star />
+    return favorite ? <StarFill /> : <Star />
   }
 
   const handleSubmit = e => {
@@ -51,10 +50,10 @@ function TodoInput(props) {
       <div
         onClick={e => {
           e.preventDefault()
-          setfarvorite(!farvorite)
+          setfavorite(!favorite)
           setTodo({
             ...todo,
-            farvorite: !todo.farvorite,
+            favorite: !todo.favorite,
           })
         }}
       >

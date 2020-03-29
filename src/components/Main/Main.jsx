@@ -3,17 +3,17 @@ import './Main.css'
 import {connect } from 'react-redux'
 import TodoInput from './Input/TodoInput'
 import Header from './Header/Header'
+import TodoList from './TodoList/TodoList'
 
-function Main(props) {
+function Main() {
     return (
         <div className='main'>
             <Header />
             <TodoInput />
+
+            <TodoList />
         </div>
     )
 }
 
-const mapStateToProps = state =>{
-    return state
-}
-export default connect(mapStateToProps,  {})(Main)
+export default Main

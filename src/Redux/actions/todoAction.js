@@ -1,5 +1,5 @@
 import Actions from "./../actionTypes/actiontypes";
-const { ADD_TODO, EDIT_TODO, DELETE_TODO } = Actions;
+const { ADD_TODO} = Actions;
 
 export function addTodo (todo){
 
