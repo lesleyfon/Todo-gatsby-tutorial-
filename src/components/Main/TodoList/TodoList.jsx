@@ -8,24 +8,24 @@ function TodoList(props) {
 
     useEffect(()=>{ 
         setTodo(props.todo)
-    },[props.todo])
+    },[props.todo,])
 
-    const displayCards = () => {
-        if(todo.length <= 0 ){
-            return null
-        }else{
-           return todo.map((item, index) => <TodoCard key={index} todo={item}/>)
-        }
-    }
+    // const displayCards = () => {
+    //     if(todo.length <= 0 ){
+    //         return null
+    //     }else{
+    //        return )
+    //     }
+    // }
     return (
         <div>
-            {displayCards()}
+
+            { (todo.length <= 0 ) ? null :  todo.map((item, index) => <TodoCard key={index} todo={ item } index={index}/>) }
         </div>
     )
 }
 
 const mapstateToProps = state => {
-    console.log(state)
     return {
         todo:  state.todoreducer.todo
     }

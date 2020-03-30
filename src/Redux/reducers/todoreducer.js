@@ -1,13 +1,35 @@
 import Actions from "./../actionTypes/actiontypes";
-const { ADD_TODO, EDIT_TODO, DELETE_TODO } = Actions;
+const { ADD_TODO, EDIT_TODO, DELETE_TODO, COMPLETE_TODO } = Actions;
 const intState ={
     todo: [{
-        name: "Fist Todo",
-        completed: false,
-        date: "",
-        category: "",
-        farvorite: false,
-      }]
+      name: "Fist Todo",
+      completed: false,
+      date: "",
+      category: "",
+      farvorite: false,
+    },
+    {
+      name: "New todo",
+      completed: true,
+      date: "",
+      category: "",
+      favorite: false
+    },
+    {
+      name: "New todo",
+      completed: false,
+      date: "",
+      category: "",
+      favorite: false
+    },
+    {
+      name: "New todo",
+      completed: false,
+      date: "",
+      category: "",
+      favorite: false
+    }
+  ]
 }
 
 export function todoreducer (state = intState, action) {
@@ -28,6 +50,13 @@ export function todoreducer (state = intState, action) {
                 action.payload            
             ]
           }
+      case COMPLETE_TODO: 
+          // console.log(action.payload)
+      return {
+        ...state,
+        todo: state.todo.filter((item, index) =>  index !== action.payload.index)
+        
+      }
       case DELETE_TODO:
         return {
             ...state,
@@ -37,6 +66,10 @@ export function todoreducer (state = intState, action) {
             ]
           }
       default:
-        return state
+  
+        return {
+          ...state,
+          todo: state.todo.filter(item => !item.completed)
+        }
     }
   }

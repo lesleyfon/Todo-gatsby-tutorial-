@@ -8,7 +8,7 @@ import { addTodo } from "./../../../Redux/actions/todoAction";
 
 function TodoInput(props) {
   
-  const [favorite, setfavorite] = useState(false)
+  const [favorite, setFavorite] = useState(false)
   const [todo, setTodo] = useState({
     name: "",
     completed: false,
@@ -48,14 +48,20 @@ function TodoInput(props) {
       />
       <Calendar />
       <div
+        role ='button'
+        tabIndex={0}
         onClick={e => {
           e.preventDefault()
-          setfavorite(!favorite)
+          setFavorite(!favorite)
           setTodo({
             ...todo,
             favorite: !todo.favorite,
           })
         }}
+        onKeyUp={()=>{
+          setFavorite(!favorite);
+          
+      }}
       >
         {displayFav()}
       </div>
