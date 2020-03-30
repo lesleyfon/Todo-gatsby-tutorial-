@@ -5,17 +5,25 @@
     background-color: #849AA7;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .div-todo svg{
     font-size: 25px;
-    padding: 0px 10px;
+    padding: 5px;
     margin: 0px;
 }
 div #input-todo{
-    width: 100%;
+    width: 90%;
     height: 100%;
     border: none;
     color: aliceblue;
     font-size: 20px;
     background: transparent;
+}
+
+.calendarXfavorite{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 10%;
 }

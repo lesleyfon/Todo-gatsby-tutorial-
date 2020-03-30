@@ -1,13 +1,11 @@
 import React, { useState } from "react"
 import { connect } from "react-redux"
 import "./TodoInput.css"
-import { PlusSquare, Calendar, Star, StarFill } from "react-bootstrap-icons";
+import { PlusSquare, Calendar, Star, StarFill } from "react-bootstrap-icons"
 
-import { addTodo } from "./../../../Redux/actions/todoAction";
-
+import { addTodo } from "./../../../Redux/actions/todoAction"
 
 function TodoInput(props) {
-  
   const [favorite, setFavorite] = useState(false)
   const [todo, setTodo] = useState({
     name: "",
@@ -46,23 +44,24 @@ function TodoInput(props) {
         placeholder="Add a todo ..."
         onKeyUp={handleChange}
       />
-      <Calendar />
-      <div
-        role ='button'
-        tabIndex={0}
-        onClick={e => {
-          e.preventDefault()
-          setFavorite(!favorite)
-          setTodo({
-            ...todo,
-            favorite: !todo.favorite,
-          })
-        }}
-        onKeyUp={()=>{
-          setFavorite(!favorite);
-          
-      }}
-      >
+
+      <div className='calendarXfavorite'>
+        <Calendar />
+        <div
+          role="button"
+          tabIndex={0}
+          onClick={e => {
+            e.preventDefault()
+            setFavorite(!favorite)
+            setTodo({
+              ...todo,
+              favorite: !todo.favorite,
+            })
+          }}
+          onKeyUp={() => {
+            setFavorite(!favorite)
+          }}
+        ></div>
         {displayFav()}
       </div>
     </div>
