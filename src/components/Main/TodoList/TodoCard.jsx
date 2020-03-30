@@ -26,7 +26,13 @@ function TodoCard(props) {
   return (
     <div className="todo-card">
       <div>
-        <div className="todo-completed" onClick={handleCompleted}>
+        <div 
+         role ='button'
+         tabIndex={0}
+         className="todo-completed" 
+         onClick={handleCompleted}
+         onKeyUp={handleCompleted}
+         >
           <FileEarmarkCheck 
             size={20}
           />
