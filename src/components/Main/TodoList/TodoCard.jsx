@@ -37,7 +37,7 @@ function TodoCard(props) {
             size={20}
           />
         </div>
-        <h5 className="todo-title">{props.todo.name}</h5>
+        <p className="todo-title">{props.todo.name}</p>
       </div>
       <div
         role="button"

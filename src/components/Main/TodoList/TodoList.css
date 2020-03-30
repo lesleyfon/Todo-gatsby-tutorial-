@@ -1,7 +1,7 @@
 .todo-card{
     width: 95%;
     margin:30px auto;
-    height: 50px;
+    height: 100%;
     background-color: #849AA7;
     display: flex;
     align-items: center;
@@ -22,4 +22,9 @@ div .todo-completed{
 
 div .todo-completed svg {
     margin: 0;
+}
+.todo-title {
+    font-weight: 500;
+    color: aliceblue;
+    margin: 8px;
 }
