@@ -6,10 +6,12 @@ const initState = {
     {
       name: "Inbox",
       date: "09/09/2019",
+      todo: []
     },
     {
       name: "Today",
       date: "09/09/2019",
+      todo: []
     },
   ],
 }
