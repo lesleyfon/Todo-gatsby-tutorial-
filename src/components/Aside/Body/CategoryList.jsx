@@ -34,6 +34,7 @@ function CategoryList(props) {
 }
 
 const mapStateToProps = state => {
+    console.log(state.todocategories.category)
     return {
         category: state.todocategories.category
     }

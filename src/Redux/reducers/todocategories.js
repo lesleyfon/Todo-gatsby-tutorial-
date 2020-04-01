@@ -20,26 +20,26 @@ export function todocategories(state = initState, action) {
     case ADD_TODO_CATEGORY:
       return {
         ...state,
-        category: {
+        category: [
           ...state.category,
-          ...action.payload,
-        },
+          action.payload,
+      ]
       }
     case EDIT_TODO_CATEGORY:
       return {
         ...state,
-        category: {
+        category: [
           ...state.category,
-          ...action.payload,
-        },
+          action.payload,
+        ],
       }
     case DELETE_TODO_CATEGORY:
       return {
         ...state,
-        category: {
+        category: [
           ...state.category,
           ...action.payload,
-        },
+        ],
       }
     default:
       return state
